@@ -1,20 +1,23 @@
 package com.plcoding.graphqlcountriesapp.presentation
 
-import androidx.compose.runtime.MutableState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.plcoding.graphqlcountriesapp.domain.DetailedCountry
 import com.plcoding.graphqlcountriesapp.domain.SimpleCountry
-import com.plcoding.graphqlcountriesapp.domain.getCountriesUseCase
-import com.plcoding.graphqlcountriesapp.domain.getCountryUseCase
+import com.plcoding.graphqlcountriesapp.domain.GetCountriesUseCase
+import com.plcoding.graphqlcountriesapp.domain.GetCountryUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CountriesViewModel(
-    private val getCountriesUseCase: getCountriesUseCase,
-    private val getCountryUseCase: getCountryUseCase
+
+@HiltViewModel
+class CountriesViewModel @Inject constructor (
+    private val getCountriesUseCase: GetCountriesUseCase,
+    private val getCountryUseCase: GetCountryUseCase
 ): ViewModel() {
 
      private val _state = MutableStateFlow(CountriesState())
