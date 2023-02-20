@@ -2,9 +2,13 @@
 AndroidkoltinWithGRAPHQL
 
 JETPACK COMPOSE ANDROID APP UTILING GRAPHQL AS NETWORK CLIENT
+
 CLEAN ARCHITECTURE
+
 DAGGERHILT
+
 FLOW
+
 JETPACK COMPOSE
 
 <img width="1440" alt="Screenshot 2023-02-20 at 08 30 23" src="https://user-images.githubusercontent.com/44091450/220041796-9ade1e9d-f844-4c10-9998-2e0a5456c5a2.png">
